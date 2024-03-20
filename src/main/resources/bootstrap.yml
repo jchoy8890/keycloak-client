@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /api
+  port: 9091
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          SemanaDigital:
+            issuer-uri: http://localhost:8080/realms/SemanaDigital
+        registration:
+          SemanaDigital:
+            provider: SemanaDigital
+            client-name: Semana Digital
+            client-id: semana-digital
+            client-secret: ZMrZKkzQtVcaYTpFzNNLPZDqE2J6M6FB
+            scope: openid
+            authorization-grant-type: authorization_code
